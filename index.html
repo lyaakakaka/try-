@@ -4,7 +4,37 @@
     <title>Happy Belated Birthday 🎉</title>
 </head>
 <body style="text-align:center; font-family:sans-serif; background-color:#ffe6f0;">
+<h1 onclick="startGame()" style="cursor:pointer;">
+  🎁 Click here... this is for you
+</h1>
 
+<div id="game" style="display:none;">
+  <!-- game will appear here -->
+</div>
+
+<div id="letter" style="display:none;">
+  <h2>💌 Your Letter</h2>
+  <p>Happy belated birthday... I made this for you 💖</p>
+</div>
+    <script>
+function startGame() {
+  document.querySelector("h1").style.display = "none";
+  document.getElementById("game").style.display = "block";
+
+  document.getElementById("game").innerHTML = `
+    <p>🎯 Shoot the cake! (click it)</p>
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
+         width="200"
+         onclick="winGame()"
+         style="cursor:pointer;">
+  `;
+}
+
+function winGame() {
+  document.getElementById("game").style.display = "none";
+  document.getElementById("letter").style.display = "block";
+}
+</script>
     <h1>🎂 Happy Belated Birthday! 🎂</h1>
     <h2>Dear [zul noober]</h2>
 
